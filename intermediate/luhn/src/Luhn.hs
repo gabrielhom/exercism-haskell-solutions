@@ -13,6 +13,5 @@ isValid n
           (reverse (onlyDigits n))
       )
       `mod` 10 == 0
-
-onlyDigits :: [Char] -> [Int]
-onlyDigits n = map (\ch -> read [ch] :: Int) (filter isDigit n)
+  where
+    onlyDigits = map (\ch -> read [ch] :: Int) . filter isDigit
