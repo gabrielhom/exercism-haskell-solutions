@@ -1,6 +1,6 @@
 module Luhn (isValid) where
 
-import Data.Char
+import Data.Char (isDigit)
 
 isValid :: String -> Bool
 isValid n
